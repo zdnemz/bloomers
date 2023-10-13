@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloomers</title>
+  <link rel="stylesheet" href="/dist/output.css">
+  <link rel="icon" href="public/logo.svg" type="image/x-icon">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<style>
+  .bg-main-combination {
+    background: linear-gradient(to bottom, #29828c, #255c5f);
+  }
+
+  .bg-main-hover:hover {
+    background: #255c5f;
+  }
+
+  .bg-main-button {
+    background: linear-gradient(to bottom, #29828c, #255c5f);
+  }
+
+  .bg-main-button:hover {
+    background: linear-gradient(to bottom, #255c5f, #255c5f);
+  }
+
+  .bg-card-combination {
+    background: linear-gradient(to bottom, #e9f0f8, #e0ebf3);
+  }
+
+  .menu-active {
+    transform: translateX(0);
+  }
+</style>
+
+<body class="bg-background relative">
+
+  <!-- blob -->
+  <div class="absolute h-full w-full -z-10 overflow-x-hidden">
+    <img src="public/shapes/shapes1.svg" alt=""
+      class="absolute translate-x-[40vw] translate-y-[25rem] scale-[0.4] md:scale-[0.3] md:translate-y-[8rem]">
+    <img src="public/shapes/shapes4.svg" alt=""
+      class="absolute translate-x-[-40vw] translate-y-[-5rem] scale-[0.4] rotate-90">
+  </div>
+
+  <header class="absolute w-full flex items-center drop-shadow-md">
+    <div class="w-full">
+      <div class="flex items-center justify-between relative px-6 py-4 text-main-primary">
+
+        <h1 class="font-bold text-xl">Bloomers</h1>
+        <div class="md:hidden">
+          <i class="fa-solid fa-bars text-xl cursor-pointer" onclick="navBar(this)"></i>
+        </div>
+
+        <div
+          class="md:top-0 md:p-0 md:static md:z-0 w-auto h-auto fixed top-[100%] right-0 -z-10 w-max[200px] h-max[200px overflow-hidden">
+          <div id="navBarMenu"
+            class="w-full h-full bg-background px-12 py-8 translate-x-[100vw] duration-500 md:translate-x-0 md:p-0 md:bg-transparent ">
+            <ul class="gap-6 flex flex-col md:gap-4 md:flex-row">
+              <li class="hover:text-main-secondary duration-300"><a href="#home">Home</a></li>
+              <li class="hover:text-main-secondary duration-300"><a href="#products">Products</a></li>
+              <li class="hover:text-main-secondary duration-300"><a href="#about">About</a></li>
+              <li class="hover:text-main-secondary duration-300"><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="text-main-primary px-6 py-4 pt-[10rem] md:flex md:justify-between md:px-12 lg:px-20">
+      <div class="md:w-1/2">
+        <h1 class="text-3xl font-bold w-4/5">Let your mind explore new world.</h1>
+        <p class="my-4 lg:my-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem,
+          voluptatum.</p>
+        <a href="#"><button class="bg-main-button text-white px-6 py-2 duration-500 drop-shadow-md">Get
+            Started</button></a>
+      </div>
+      <div class="md:w-1/2 p-4">
+        <img src="public/photo2.svg" alt="" class="w-2/3 m-auto">
+      </div>
+    </div>
+  </section>
+
+  <!-- products -->
+  <section class="px-6 py-8 text-main-primary md:px-12 lg:px-20 lg:py-12">
+    <h1 class="font-bold text-xl">Popular products</h1>
+    <div class="py-4 md:grid md:grid-cols-2 md:gap-4 lg:grid-cols-4 lg:gap-6">
+      <!-- card -->
+      <div class="p-4 bg-gradient-to-b bg-main-hover bg-card-combination hover:text-white duration-500 mb-4">
+        <div class="flex justify-between">
+          <i class="fa-solid fa-sliders"></i>
+          <a href="" class="hover:underline">Learn More...</a>
+        </div>
+        <h1 class="pt-10 font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe corporis
+          optio, natus rem laboriosam similique?</h1>
+      </div>
+
+      <div class="p-4 bg-gradient-to-b bg-main-hover bg-card-combination hover:text-white duration-500 mb-4">
+        <div class="flex justify-between">
+          <i class="fa-solid fa-shield"></i>
+          <a href="" class="hover:underline">Learn More...</a>
+        </div>
+        <h1 class="pt-10 font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, qui
+          exercitationem ullam accusantium officia vero.</h1>
+      </div>
+
+      <div class="p-4 bg-gradient-to-b bg-main-hover bg-card-combination hover:text-white duration-500 mb-4">
+        <div class="flex justify-between">
+          <i class="fa-solid fa-code"></i>
+          <a href="" class="hover:underline">Learn More...</a>
+        </div>
+        <h1 class="pt-10 font-semibold">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium officiis
+          dignissimos, beatae commodi debitis mollitia!</h1>
+      </div>
+
+      <div class="p-4 bg-gradient-to-b bg-main-hover bg-card-combination hover:text-white duration-500 mb-4">
+        <div class="flex justify-between">
+          <i class="fa-solid fa-gear"></i>
+          <a href="" class="hover:underline">Learn More...</a>
+        </div>
+        <h1 class="pt-10 font-semibold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam quasi ipsam
+          unde. Modi, facere magnam.</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- about -->
+  <section class="py-4 px-6 md:px-12 lg:px-20 lg:py-12">
+    <div class="md:flex md:gap-12 lg:gap-20">
+      <div class="md:w-1/2 md:m-auto py-4">
+        <div class="relative -z-10">
+          <img src="public/shapes/shapes2.svg" alt="" class="absolute translate-x-[-20%] translate-y-[-20%] rotate-90">
+        </div>
+        <img src="public/photo1.svg" alt="" class="drop-shadow-md">
+      </div>
+      <div class="mt-4 text-main-primary md:w-1/2 md:mt-0 lg:mt-[-2rem]">
+        <div
+          class="flex p-4 mb-4 bg-main-hover bg-card-combination drop-shadow-md hover:text-white duration-500 lg:mb-8">
+          <div class="px-6 py-2">
+            <i class="fa-solid fa-briefcase text-xl"></i>
+          </div>
+          <div>
+            <h1 class="font-bold text-lg pb-2">WHO WE ARE</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae tempore vitae maiores ducimus,
+              placeat eveniet esse. Mollitia facere quasi molestiae.</p>
+          </div>
+        </div>
+
+        <div class="flex p-4 mb-4 bg-main-hover bg-card-combination hover:text-white duration-500">
+          <div class="px-6 py-2">
+            <i class="fa-solid fa-bars-progress"></i>
+          </div>
+          <div>
+            <h1 class="font-bold text-lg pb-2">OUR MISSION</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis deserunt, deleniti iusto
+              voluptate sint consequatur repellat dicta in consectetur ipsam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="md:flex md:gap-4 mt-4">
+      <div class="md:block p-6 md:p-0 md:w-1/3 lg:w-1/4 m-auto">
+        <img src="public/photo3.svg" alt="" class="m-auto">
+      </div>
+      <div class="md md:w-2/3 md:px-12 lg:w-3/4 lg:px-20 lg:py-12">
+        <div class="text-main-primary my-8">
+          <h1 class="text-3xl font-bold w-4/5">Most exciting creative products</h1>
+          <p class="my-4 lg:my-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quos
+            sit magni tenetur.
+            Quae doloremque ex praesentium harum commodi numquam?</p>
+          <div class="flex justify-end">
+            <a href="#"><button class="bg-main-button text-white px-6 py-2 duration-500 drop-shadow-md">Learn
+                More</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- banner -->
+  <section class="px-8 py-6 bg-amber-50 md:pl-20 md:px-12 lg:px-20 lg:py-12">
+    <div class="text-main-primary">
+      <h2 class="text-xl font-semibold text-accent-secondary">Lorem ipsum dolor sit.</h2>
+      <h1 class="py-2 text-3xl font-bold">Lorem ipsum dolor sit amet consectetur</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt debitis quae perferendis
+        dicta ipsa tempore
+        provident ipsam et aliquam fugit!</p>
+    </div>
+  </section>
+
+  <!-- messagge -->
+  <section class="py-16">
+    <div
+      class="m-auto bg-gradient-to-br from-main-secondary to-main-primary text-white w-fit p-8 drop-shadow-md md:px-12">
+      <div class="m-auto">
+        <h1 class="text-center pb-4 font-semibold text-lg">Send a messagge</h1>
+        <div class="bg-white p-[1px] md:w-[40vw] md:flex md:justify-between">
+          <input type="text" placeholder="Text something..." class="text-main-primary pl-1 md:w-full md:pl-4">
+          <input type="button" value="Send" class="bg-main-button px-3 py-1">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer class="py-6 px-8 bg-card-secondary text-main-primary md:px-12 md:flex md:justify-between lg:px-20 lg:py-12">
+    <div class="flex justify-between md:w-1/2">
+      <div class="py-2">
+        <h2 class="text-xl font-semibold pb-2">Menu</h2>
+        <ul>
+          <li class="hover:text-main-secondary duration-300"><a href="#">Beranda</a></li>
+          <li class="hover:text-main-secondary duration-300"><a href="#">Tentang Kami</a></li>
+          <li class="hover:text-main-secondary duration-300"><a href="#">Layanan</a></li>
+          <li class="hover:text-main-secondary duration-300"><a href="#">Kontak</a></li>
+        </ul>
+      </div>
+      <div class="py-2">
+        <h2 class="text-xl font-semibold pb-2">Contact us</h2>
+        <ul>
+          <li class="hover:text-main-secondary duration-300"><a href="#"><i
+                class="fab fa-facebook pr-2"></i>bloomers.example</a></li>
+          <li class="hover:text-main-secondary duration-300"><a href="#"><i
+                class="fab fa-twitter pr-2"></i>bloomers.example</a></li>
+          <li class="hover:text-main-secondary duration-300"><a href="#"><i
+                class="fab fa-instagram pr-2"></i>bloomers.example</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-center py-2 md:mt-auto md:mb-[2%]">
+      <p>&copy; 2023 ZidaneMZ. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- script -->
+  <script src="main.js"></script>
+
+</body>
+
+</html>
